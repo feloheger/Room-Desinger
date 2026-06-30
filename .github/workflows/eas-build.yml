@@ -49,7 +49,7 @@ jobs:
       - name: 🔍 TypeScript-Check
         run: npm run type-check
 
-      - name: 🔄 EAS Update veröffentlichen (Branch: preview)
+      - name:  EAS Update veröffentlichen (Branch: preview)
         run: |
           eas update \
             --branch preview \
