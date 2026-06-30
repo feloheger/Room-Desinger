@@ -1,0 +1,94 @@
+{
+  "expo": {
+    "name": "AI Interior Designer",
+    "slug": "ai-interior-designer",
+    "scheme": "aiinteriordesigner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.aiinteriordesigner",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Wir benötigen Zugriff auf deine Kamera, um ein Foto deines Raumes für die KI-Analyse aufzunehmen.",
+        "NSPhotoLibraryUsageDescription": "Wir benötigen Zugriff auf deine Fotos, damit du ein bestehendes Raumbild auswählen kannst.",
+        "NSPhotoLibraryAddUsageDescription": "Wir speichern dein generiertes Einrichtungs-Konzept in deiner Fotobibliothek, wenn du es herunterlädst."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.yourcompany.aiinteriordesigner",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Wir benötigen Zugriff auf deine Kamera, um ein Foto deines Raumes aufzunehmen.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Wir benötigen Zugriff auf deine Fotos, um ein Raumbild auszuwählen."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Wir speichern dein generiertes Konzept in deiner Fotobibliothek.",
+          "savePhotosPermission": "Wir speichern dein generiertes Konzept in deiner Fotobibliothek.",
+          "isAccessMediaLocationEnabled": false
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FFFFFF",
+          "image": "./assets/splash.png",
+          "imageWidth": 200
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "YOUR_EAS_PROJECT_ID_HERE"
+      }
+    },
+    "owner": "your-expo-username",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/YOUR_EAS_PROJECT_ID_HERE"
+    }
+  }
+}
