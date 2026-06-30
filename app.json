@@ -2,7 +2,7 @@
   "expo": {
     "name": "AI Interior Designer",
     "slug": "ai-interior-designer",
-    "scheme": "aiinteriordesigner",
+    "scheme": "aiinteriordesigner", 
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
