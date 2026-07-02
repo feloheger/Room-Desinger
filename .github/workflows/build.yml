@@ -18,6 +18,8 @@ jobs:
         run: npm install -g eas-cli
       - name: Install dependencies
         run: npm install --legacy-peer-deps
+      - name: Fix ajv conflict
+        run: npm install ajv@^8.0.0 --legacy-peer-deps
       - name: Build APK
         run: EAS_NO_VCS=1 eas build --platform android --profile preview --non-interactive
         env:
