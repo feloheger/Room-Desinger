@@ -1,7 +1,7 @@
-{ 
+{
   "expo": {
-    "name": "MFD",
-    "slug": "womensaver",
+    "name": "AI Interior Designer",
+    "slug": "ai-interior-designer",
     "scheme": "aiinteriordesigner",
     "version": "1.0.0",
     "orientation": "portrait",
