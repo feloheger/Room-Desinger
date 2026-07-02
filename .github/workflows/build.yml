@@ -14,13 +14,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-      - name: Install EAS CLI manually
+      - name: Install EAS CLI
         run: npm install -g eas-cli
       - name: Install dependencies
         run: npm install --legacy-peer-deps
-      - name: Debug expo config
-        run: ./node_modules/.bin/expo config --json 2>&1 || true
-        continue-on-error: true
       - name: Build APK
         run: EAS_NO_VCS=1 eas build --platform android --profile preview --non-interactive
         env:
