@@ -9,8 +9,15 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "prebuild": "expo prebuild",
-    "build:android": "eas build --platform android",
-    "postinstall": "expo install --fix -- --non-interactive || true"
+    "build:android": "eas build --platform android"
+  },
+  "expo": {
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "exclude": ["@google/generative-ai", "ajv"],
+        "listUnknownPackages": false
+      }
+    }
   },
   "dependencies": {
     "expo": "~52.0.0",
