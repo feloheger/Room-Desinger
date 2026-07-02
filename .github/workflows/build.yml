@@ -1,46 +1,24 @@
 name: Build APK
-
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
-    inputs:
-      build_profile:
-        description: "EAS Build Profile (preview | production)"
-        required: false
-        default: "preview"
-        type: choice
-        options:
-          - preview
-          - production
-
 jobs:
   build:
-    name: EAS Build (Android APK)
+    name: Build Android APK
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-
-      - name: Setup Expo & EAS CLI
-        uses: expo/expo-github-action@v8
-        with:
-          eas-version: latest
-          token: ${{ secrets.EXPO_TOKEN }}
-
+      - name: Install EAS CLI manually
+        run: npm install -g eas-cli
       - name: Install dependencies
         run: npm install --legacy-peer-deps
-
       - name: Build APK
-        run: |
-          eas build \
-            --platform android \
-            --profile ${{ github.event.inputs.build_profile || 'preview' }} \
-            --non-interactive \
-            --no-wait
+        run: EAS_NO_VCS=1 eas build --platform android --profile preview --non-interactive
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
