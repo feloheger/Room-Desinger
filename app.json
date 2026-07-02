@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "AI Interior Designer",
-    "slug": "ai-interior-designer",
-    "scheme": "aiinteriordesigner", 
+    "name": "MFD",
+    "slug": "womensaver",
+    "scheme": "aiinteriordesigner",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -80,15 +80,15 @@
         "origin": false
       },
       "eas": {
-        "projectId": "YOUR_EAS_PROJECT_ID_HERE"
+        "projectId": "488656bf-9be3-4f54-b1c2-d7f4ca451af2"
       }
     },
-    "owner": "your-expo-username",
+    "owner": "womensavers-team",
     "runtimeVersion": {
       "policy": "appVersion"
     },
     "updates": {
-      "url": "https://u.expo.dev/YOUR_EAS_PROJECT_ID_HERE"
+      "url": "https://u.expo.dev/488656bf-9be3-4f54-b1c2-d7f4ca451af2"
     }
   }
 }
