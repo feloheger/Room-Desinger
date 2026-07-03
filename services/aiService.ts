@@ -28,7 +28,7 @@ if (!GEMINI_API_KEY) {
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 // gemini-2.0-flash-lite is available on the free tier and supports vision input.
-const MODEL_NAME = "gemini-2.0-flash-lite";
+const MODEL_NAME = "gemini-2.5-flash";
 
 /**
  * The instruction sent to Gemini alongside the image. We ask explicitly
